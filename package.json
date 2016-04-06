@@ -3,7 +3,6 @@
   "version": "0.2.0",
   "description": "React webpack template",
   "main": "lib/index.js",
-  "dependencies": {},
   "author": {
     "name": "Tan Loc Nguyen"
   },
@@ -23,7 +22,7 @@
     "test": "karma start",
     "test:ci": "watch 'npm run test' src/"
   },
-  "devDependencies": {
+  "dependencies": {
     "eslint": "^1.4.3",
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^3.4.1",
