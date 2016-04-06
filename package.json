@@ -18,8 +18,8 @@
     "url": "git@github.com:tanlocnguyenbcm/react-webpack.git"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --watch --inline --define WEBPACK_ENV='dev'",
-    "build": "./node_modules/.bin/webpack  --define WEBPACK_ENV='build'",
+    "start": "./node_modules/.bin/webpack --watch --inline --define WEBPACK_ENV='dev'",
+    "build": "./node_modules/.bin/webpack",
     "test": "karma start",
     "test:ci": "watch 'npm run test' src/"
   },
