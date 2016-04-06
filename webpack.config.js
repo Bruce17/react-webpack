@@ -5,8 +5,8 @@ var WebpackDevServer = require('webpack-dev-server');
 var path             = require('path');
 
 var appName = 'app';
-var host    = '0.0.0.0';
-var port    = '9000';
+var host    = process.env.IP || '0.0.0.0';
+var port    = process.env.PORT || '9000';
 
 var plugins = [], outputFile;
 
