@@ -1,6 +1,6 @@
 var webpack          = require('webpack');
 var UglifyJsPlugin   = webpack.optimize.UglifyJsPlugin;
-var env              = process.env.DEV_EVN || 'dev';
+var env              = process.env.WEBPACK_ENV || 'dev';
 var WebpackDevServer = require('webpack-dev-server');
 var path             = require('path');
 
@@ -23,7 +23,7 @@ var config = {
     output: {
         path: __dirname + '/lib',
         filename: outputFile,
-        publicPath: __dirname + '/example'
+        publicPath: __dirname + '/public'
     },
     module: {
         loaders: [
@@ -47,11 +47,12 @@ var config = {
     plugins: plugins
 };
 
-if (env === 'dev') {
+if (env.trim() === 'dev') {
     new WebpackDevServer(webpack(config), {
-        contentBase: './example',
+        contentBase: './public',
         hot: true,
-        debug: true
+        debug: true,
+        inline: true
     }).listen(port, host, function (err, result) {
             if (err) {
                 console.log(err);

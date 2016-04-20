@@ -17,8 +17,8 @@
     "url": "git@github.com:tanlocnguyenbcm/react-webpack.git"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack --watch --inline --define WEBPACK_ENV='dev'",
-    "build": "./node_modules/.bin/webpack",
+    "start": "SET WEBPACK_ENV=dev & webpack --watch --inline",
+    "build": "SET WEBPACK_ENV=build & webpack",
     "test": "karma start",
     "test:ci": "watch 'npm run test' src/"
   },
@@ -30,7 +30,16 @@
     "react": "^0.14.7",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.11.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "devDependencies": {
+    "firebase": "^2.4.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.2.4",
+    "reactfire": "^0.6.0",
+    "redux": "^3.4.0",
+    "redux-thunk": "^2.0.1",
+    "history": "2.0.0"
   }
 }
