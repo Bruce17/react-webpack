@@ -12,18 +12,18 @@ var plugins = [], outputFile;
 
 if (env === 'build') {
     plugins.push(new UglifyJsPlugin({minimize: true}));
-    outputFile = appName + '.min.js';
+    outputFile = '/lib/' + appName + '.min.js';
 } else {
-    outputFile = appName + '.js';
+    outputFile = '/lib/' + appName + '.js';
 }
 
 var config = {
     entry: './src/index.jsx',
     devtool: 'source-map',
     output: {
-        path: __dirname + '/lib',
+        path: __dirname + '/public',
         filename: outputFile,
-        publicPath: __dirname + '/public'
+        publicPath: ''
     },
     module: {
         loaders: [
@@ -44,23 +44,30 @@ var config = {
         root: path.resolve('./src'),
         extensions: ['', '.js', '.jsx']
     },
-    plugins: plugins
+    plugins: plugins,
+    devServer: {
+        port: port,
+        contentBase: './public',
+        outputPath: './public',
+        stats: 'minimal'
+    }
 };
 
-if (env.trim() === 'dev') {
-    new WebpackDevServer(webpack(config), {
-        contentBase: './public',
-        hot: true,
-        debug: true,
-        inline: true
-    }).listen(port, host, function (err, result) {
-            if (err) {
-                console.log(err);
-            }
-        });
-    console.log('-------------------------');
-    console.log('Local web server runs at http://' + host + ':' + port);
-    console.log('-------------------------');
-}
+// i think this shit is outdate
+//if (env.trim() === 'dev') {
+//    new WebpackDevServer(webpack(config), {
+//        contentBase: './public',
+//        outputPath: './public',
+//        stats: 'minimal',
+//        debug: true
+//    }).listen(port, host, function (err, result) {
+//            if (err) {
+//                console.log(err);
+//            }
+//        });
+//    console.log('-------------------------');
+//    console.log('Local web server runs at http://' + host + ':' + port);
+//    console.log('-------------------------');
+//}
 
 module.exports = config;

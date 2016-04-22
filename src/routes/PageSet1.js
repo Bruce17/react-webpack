@@ -10,7 +10,7 @@ class PageSet1 extends Component {
         return (
             <div>
                 <Authpanel />
-                wtf
+                WTF
             </div>
             );
     }

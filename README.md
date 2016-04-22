@@ -5,7 +5,6 @@ The aim of this repository is to provide a template for developing [React](https
 ## Features
 
 * Bundles [React](https://facebook.github.io/react/) with `jsx` syntax
-* Compiles ES6 (with [Babel](https://babeljs.io/))
 * Linting (with [ESLint](http://eslint.org/))
 * Build with [webpack](https://webpack.github.io/)
 * Test with [Mocha](http://mochajs.org/), [Chai](http://chaijs.com/) and [Sinon](http://sinonjs.org/)
@@ -20,7 +19,3 @@ The aim of this repository is to provide a template for developing [React](https
 * Run `npm run dev` to build the project, start watching files and run the local server
 * Run `npm test` to run the tests once
 * Run `npm run test:ci` to watch the `src` directory for changes and run the tests
-
-## MISC
-
-* [A modern React starter pack based on webpack](http://krasimirtsonev.com/blog/article/a-modern-react-starter-pack-based-on-webpack)

@@ -12,7 +12,7 @@ var Authpanel = React.createClass({
                     <div className="authpanel">
                         <span>Logged in as {auth.username}.</span>
                         {' '}
-                        <button onClick={p.logoutUser}>Log out</button>
+                        <button onClick={p.logoutUser}>Log out wtf</button>
                     </div>
                 );
             case C.AWAITING_AUTH_RESPONSE:
@@ -24,7 +24,7 @@ var Authpanel = React.createClass({
             default:
                 return (
                     <div className="authpanel">
-                        <button onClick={p.attemptLogin}>Log in</button>
+                        <button onClick={p.attemptLogin}>Log in asd  swtf</button>
                     </div>
                 );
         }
