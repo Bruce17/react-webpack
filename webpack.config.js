@@ -6,7 +6,7 @@ var path             = require('path');
 
 var appName = 'app';
 var host    = process.env.IP || '0.0.0.0';
-var port    = process.env.PORT || '9000';
+var port    = process.env.PORT || '1337';
 
 var plugins = [], outputFile;
 
